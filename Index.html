@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send Money</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    text-align:center;
+    padding:40px;
+}
+.container{
+    background:#fff;
+    max-width:400px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+input,button{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+button{
+    background:#00a651;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Send Money</h2>
+
+<input type="number" id="amount" placeholder="Enter Amount">
+
+<button onclick="pay()">Pay Now</button>
+
+<p>Recipient: Safaricom M-PESA (Kenya)</p>
+</div>
+
+<script>
+function pay(){
+    const amount = document.getElementById("amount").value;
+
+    if(amount===""){
+        alert("Please enter an amount.");
+        return;
+    }
+
+    alert("Continue with the official payment service to complete your transfer of KES " + amount + ".");
+}
+</script>
+
+</body>
+</html>
